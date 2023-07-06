@@ -9,12 +9,22 @@ bash miniconda.sh -b -p $HOME/miniconda3
 rm -f miniconda.sh
 . "/root/miniconda3/etc/profile.d/conda.sh"
 conda init
+conda config --set auto_activate_base false
 
 # some useful bashrc stuff
 {
-        echo 'alias rm="rm -i"'
-        echo 'PS1="vast:\W\$ "'
+  echo 'alias rm="rm -i"'
+  echo 'PS1="vast:\W\$ "'
 } >> $HOME/.bashrc
 
 # configure nnn cd-on-quit
 curl https://raw.githubusercontent.com/jarun/nnn/master/misc/quitcd/quitcd.bash_sh_zsh >> $HOME/.bashrc
+
+# setup Vim
+mkdir -p $HOME/.vim/colors
+curl https://raw.githubusercontent.com/weiliansong/dotfiles/main/vimrc -o $HOME/.vim/vimrc
+curl https://raw.githubusercontent.com/nordtheme/vim/main/colors/nord.vim -o $HOME/.vim/colors/nord.vim
+
+# setup tmux
+curl https://raw.githubusercontent.com/weiliansong/dotfiles/main/tmux -o $HOME/.tmux.conf
+. $HOME/.tmux/plugins/tpm/bin/install_plugins
