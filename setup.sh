@@ -1,6 +1,6 @@
 # download a few essentials
 sudo apt update
-sudo apt install -y build-essential libgl1-mesa-dev vim nnn git zip
+sudo apt install -y build-essential libgl1-mesa-dev vim nnn git zip unzip
 
 # install miniconda
 cd $HOME
