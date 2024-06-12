@@ -14,6 +14,8 @@ conda config --set auto_activate_base false
 # some useful bashrc stuff
 {
   echo 'alias rm="rm -i"'
+  echo 'alias ls="ls --color -h --group-directories-first"'
+  echo 'alias sdf="tmux at -dt"'
   echo 'PS1="\h:\W\$ "'
   echo 'export PATH="$HOME/software:$PATH"'
 } >> $HOME/.bashrc
