@@ -1,6 +1,6 @@
 # download a few essentials
 sudo apt update
-sudo apt install -y build-essential libgl1-mesa-dev vim git zip unzip
+sudo apt install -y build-essential libgl1-mesa-dev vim git zip unzip keychain
 
 # install miniconda
 cd $HOME
@@ -18,6 +18,7 @@ conda config --set auto_activate_base false
   echo 'alias sdf="tmux at -dt"'
   echo 'PS1="\h:\W\$ "'
   echo 'export PATH="$HOME/software:$PATH"'
+  echo 'eval $(keychain --eval)'
 } >> $HOME/.bashrc
 
 # install nnn
